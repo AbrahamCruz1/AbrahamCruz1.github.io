@@ -1,0 +1,348 @@
+/* #4c4c4c
+   #636363
+   #85c7f2
+   #dbdbdb
+   #d1d1d1
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #85c7f2;
+}
+
+/* Menu */
+.menu{
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    background: #4c4c4c;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;    
+    z-index: 100;
+}
+
+.logo{
+    text-decoration: none;
+    font-size: 26px;
+    color: #d1d1d1;
+    padding: 15px 30px;
+}
+
+.logo:hover{
+    background: #d1d1d1;    
+    color: #4c4c4c;
+    transition: all 0.5s;
+}
+
+.menu_items{
+    display: flex;           
+}
+
+.menu_items li{    
+    list-style: none;
+}
+
+.menu_items li a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #dbdbdb;
+    padding: 20px 30px;
+}
+
+.menu_items li a:hover{
+    background: #dbdbdb;    
+    color: #4c4c4c;
+    transition: all 0.5s;
+}
+
+.btn_menu{
+    display: none;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+ul.show{
+    left: 0;
+}
+
+@media screen and (max-width: 900px) {
+    .menu{
+        height: 50px;
+    }
+
+    .logo{
+        font-size: 22px;
+        padding: 12px 20px;
+    }
+
+    .menu_items li a{
+        font-size: 16px;
+        padding: 17px 20px;
+    }
+}
+
+@media screen and (max-width: 800px) {    
+    .menu_items{
+        position: fixed;
+        width: 100%;
+        height: calc(100% - 50px);
+        background: #636363;
+        top: 50px;
+        left: -100%;
+        text-align: center;
+        transition: all .4s;
+        flex-direction: column;   
+        z-index: -1;     
+    }
+    .btn_menu{
+        display: inline-flex;
+        color: #dbdbdb;        
+    }
+    .logo{
+        font-size: 26px;
+        padding: 10px 30px;
+    }
+    .menu_items li a{        
+        font-size: 16px;
+        padding: 20px 0;        
+        padding-left: 5%;
+        padding-right: 95%;
+    }
+    .menu_items li a:hover{  
+        background: #dbdbdb;   
+        color: #212121;
+    }
+    .menu_items li{       
+        border-bottom: 1px solid #dbdbdb;
+        padding: 20px 0;
+    }
+}
+
+/* Menu */
+
+.espacio{
+    height: 60px;
+    background: #d1d1d1;
+}
+
+h1, h2{
+    background: #d1d1d1;
+    text-align: center;
+    font-size: 35px;
+    color: #4c4c4c;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.inicio, .acerca, .proyectos, .herramientas, .contacto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: #dbdbdb;
+    padding: 20px 20px;
+}
+
+.pasado, .presente, .futuro{
+    width: 32%;    
+    margin: 0 10px;
+}
+
+.inicio p, .acerca p, .proyectos p{
+    font-size: 30px;
+    color: #4c4c4c;
+    /* font-family: 'Source Sans Pro', sans-serif; */
+    font-family: 'Ubuntu', sans-serif;    
+}
+
+.img_yo{
+    border-radius: 5px;
+    width: 50%;
+    height: auto;
+}
+
+.img_yo:hover{
+    filter: brightness(150%); 
+}
+
+h2{
+    font-size: 30px;
+}
+
+.acerca p, .proyectos p, .herramienta p{
+    font-size: 24px;
+}
+
+.acerca p{
+    margin: 0 10px;
+}
+
+.proyecto{
+    width: 50%;
+    height: 450px;
+    text-align: center;
+    background: #d1d1d1;
+    border-radius: 5px;
+    margin-left: 15px;
+    padding: 20px;
+}
+
+.proyecto:hover{
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.img_proyecto{
+    border-radius: 5px;    
+    width: 100%;
+    height: auto;
+}
+
+.herramientas{
+    flex-wrap: wrap;
+}
+
+.descripcion{
+    display: none;
+    font-size: 30px;
+    color: #85c7f2;
+}
+
+.herramienta:hover .descripcion{
+    display: block;
+}
+
+.herramienta{
+    display: block;
+    margin: 20px 20px;
+    display: flex;    
+    align-items: center;        
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    background-color: #85c7f2;
+    border-radius: 50%;  
+}
+.herramienta:hover .fa-brands{
+    display: none;
+}
+
+.herramienta:hover{
+    background-color: #212121;
+    border-radius: 50%;
+}
+
+.herramienta a{                  
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.herramientas .herramienta i{
+    font-size: 130px;
+}
+
+.contacto{
+    flex-wrap: wrap;
+}
+
+.whatsapp a, .telefono a, .correo a{
+    text-decoration: none;
+    border-style: none;
+    border-radius: 25px;
+    font-size: 24px;    
+    color: #DCF8C6;
+    padding: 20px;
+    transition: all 0.6s;
+    font-family: 'Ubuntu', sans-serif;   
+    margin: 20px; 
+}
+
+.whatsapp a{
+    background-color: #25D366;
+}
+
+.whatsapp a:hover{
+    background-color: #075E54;
+}
+
+.telefono a{   
+    background-color: #0000ff;    
+}
+
+.telefono a:hover{    
+    background-color: #000050;
+}
+
+.whatsapp, .telefono, .correo{
+    margin: 30px 0;
+}
+
+.correo a{
+    /* background: linear-gradient(90deg, #4285F4, #BB001B, #EA4335, #FBBC05, #34A853); */
+    background-color: #EA4335;
+}
+
+.correo a:hover{
+    background-color: #A00C00;
+}
+
+.footer{
+    text-align: center;
+    padding: 30px 0;
+    background: #4c4c4c;
+    color: #dbdbdb;
+    font-size: 14px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 900px) {
+    .inicio{
+        flex-wrap: wrap;
+    }
+    .inicio p{
+        font-size: 24px;
+    }
+    .img_yo{
+        margin-top: 20px;
+        width: 100%;
+    }
+    .acerca{
+        flex-wrap: wrap;
+    }
+    .pasado, .presente, .futuro{
+        width: 100%;   
+        margin: 0;
+    }
+    .acerca p{
+        text-align: center;
+        font-size: 20px;
+        margin-top: 20px;
+    }
+    .proyectos{
+        flex-wrap: wrap;
+    }
+    .proyectos p{
+        font-size: 20px;
+    }
+    .proyecto{
+        margin-top: 20px;
+        width: auto;
+        height: auto;
+    }
+    .contacto{
+        text-align: center;
+    }
+    .footer{
+        font-size: 12px;
+    }
+}
+
+/* Responsive */
