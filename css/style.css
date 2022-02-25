@@ -92,7 +92,7 @@ ul.show{
     .menu_items{
         position: fixed;
         width: 100%;
-        height: calc(100% - 50px);
+        height: auto;
         background: #636363;
         top: 50px;
         left: -100%;
